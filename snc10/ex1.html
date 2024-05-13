@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        body {
+            background-image: url('eletre_adventure.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        input {
+            background-color:beige;
+            width: 60%;
+            border: 2px solid;
+            border-radius: 20px;
+            height: 30px;
+            border-color: yellow;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+
+        }
+        label {
+            color:yellow;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+            font-weight: 800;
+        }
+        .dv {
+            width: 400px;
+            background-color:black;
+            border: 2px solid;
+            border-radius: 20px;
+            margin-left: 35%; 
+            display: flex;
+            flex-direction: column;  
+            align-items: center; 
+            border-color: yellow;
+            border-top-left-radius: 25%;
+            border-bottom-right-radius: 25%;
+
+        }
+        button {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            background-color: yellow;
+        }
+        .dv2 {
+            background-color: black;
+        }
+        #namesList {
+            background-color: black ;
+            color: yellow;
+            width: 100%;
+        }
+        #rst {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: yellow; 
+            background-color: transparent;
+            border-color: transparent;
+            border-radius: 0;
+            margin-bottom: 4px;
+        }
+        #rst:hover {
+            text-decoration: underline;
+        }
+        hr {
+            color: yellow;
+            background-color: yellow;
+            border-color: yellow;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-shadow: 1px 1px yellow ;">Form</h2>
+    <form id="nameForm">
+        <div class="dv">
+            <label for="nom">Nom</label><br>
+        <input type="text" id="nom" required value="MY"><br><hr/>
+        <hr>
+
+        <label for="prenom">Prénom</label><br>
+        <input type="text" id="prenom" required value="LOTUS"><br><hr/>
+        <hr>
+
+        <label for="age">Age</label><br>
+        <input type="number" id="age" required value="905"><br>
+
+        <button type="button" onclick="addName()">Add Name</button>
+        <input type="reset" value="reset data" id="rst"/>
+        </div>
+    </form>
+    <h2 style="color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-shadow: 1px 1px yellow ;">Form</h2>
+    <div id="namesList"></div>
+
+    <script src="ex1.js">
+    </script>
+</body>
+</html>

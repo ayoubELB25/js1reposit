@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ex2.css">
+    <title>Exercice 2</title>
+    <style>
+        .error {
+            border:1px solid red;
+        }
+        .correct {
+            color:green;
+
+        }
+        .container {
+            margin: 0 auto;
+            border: 1px solid blue;
+            border-radius: 30px;
+            width: 50%;
+            background-color: darkgrey;
+            text-align: center;
+            box-shadow: 7px 1px 7px  blue;
+        }
+        label {
+            color:blue;
+            font-weight: 600;
+        }
+        input {
+            background-color: black;
+            color: white;
+
+        }
+        span {
+            color: red;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        input[type="reset"],button{
+            background-color: orange;
+            border-color: orange;
+        }
+        button {
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="get" id="SingUpForm" name="SingUpForm">
+
+            <label for="UN">Username</label><br>
+            <input type="text" id="UN" name="UN" class="name" required><br>
+            <span class="span_name"></span><br>
+
+            <label for="mail">E-mail</label><br>
+            <input type="email" id="mail" name="mail" class="email" required><br>
+            <span class="span_mail"></span><br>
+
+            <label for="pass">Password</label><br>
+            <input type="password" id="pass" name="pass" class="password" required><br>
+            <span class="span_pass"></span><br>
+
+            <label for="S_country">country</label><br>
+            <select class="S_country" id="S_country" name="country">
+                <option value="" selected disabled hidden>Select Your continent</option>
+                <option value="morocco">morocco</option>
+            </select><br>
+            <span class="span_country"></span><br>
+
+            <label for="S-age">age</label><br>
+            <select class="S-age" id="S-age" name="age">
+                <option value="" selected disabled hidden>Select Your Age</option>
+                <option>18 above</option>
+                <option>18 below</option>
+            </select><br>
+            <span class="span_age"></span><br>
+
+            <button class="sing-in-btn">Sing In</button>
+            <input type="reset" id="rst">
+        </form>
+    </div>
+    <script >
+        let information = {Name : "" , Email : "" , Password : "" , country : "" , age : ""}
+
+document.querySelector(".sing-in-btn").addEventListener("click",function(e){
+    e.preventDefault();
+
+    // document.forms["SingUpForm"].submit();
+
+    let Name = document.querySelector(".name")
+    let Email = document.querySelector(".email")
+    let Password = document.querySelector(".password")
+    let country = document.querySelector(".S_country")
+    let age = document.querySelector(".S-age")
+
+    let span_name = document.querySelector(".span_name")
+    let span_mail = document.querySelector(".span_mail")
+    let span_pass = document.querySelector(".span_pass")
+    let span_country = document.querySelector(".span_country")
+    let span_age = document.querySelector(".span_age")
+
+// NAME CODE
+
+    if (Name.value.length < 5){
+        Name.classList.add("error")
+        span_name.classList.add("uncorrect")
+        span_name.classList.remove("correct")
+        span_name.innerHTML="Name must consist of 5-32 characters"
+    }
+
+    else{
+        Name.classList.remove("error")
+        span_name.classList.add("correct")
+        span_name.classList.remove("uncorrect")
+        span_name.innerHTML="STRONG NAME"
+        information.Name = Name.value
+    }
+
+//  EMAIL CODE
+
+    if (Email.value.length < 7){
+        Email.classList.add("error")
+        span_mail.classList.add("uncorrect")
+        span_mail.classList.remove("correct")
+        span_mail.innerHTML="Email must had the @gmail in the end"
+    }
+
+    else{
+        Email.classList.remove("error")
+        span_mail.classList.add("correct")
+        span_mail.classList.remove("uncorrect")
+        span_mail.innerHTML="vlaide"
+        information.Email = Email.value
+    }
+
+//  PASSWORD CODE
+
+    if (Password.value.length < 6){
+        Password.classList.add("error")
+        span_pass.classList.add("uncorrect")
+        span_pass.classList.remove("correct")
+        span_pass.innerHTML="Password must consist of 6-20 characters"
+    }
+
+    else{
+        Password.classList.remove("error")
+        span_pass.classList.add("correct")
+        span_pass.classList.remove("uncorrect")
+        span_pass.innerHTML="vlaide"
+        information.Password = Password.value
+    }
+
+// Country code
+
+    if (country.value === ""){
+        country.classList.add("error")
+        span_country.classList.add("uncorrect")
+        span_country.classList.remove("correct")
+        span_country.innerHTML="Please Select Your Country"
+    }
+
+    else{
+        country.classList.remove("error")
+        span_country.classList.add("correct")
+        span_country.classList.remove("uncorrect")
+        span_country.innerHTML=""
+        information.country = country.value
+    }
+
+// Age code
+
+    if (age.value === ""){
+        country.classList.add("error")
+        span_age.classList.add("uncorrect")
+        span_age.classList.remove("correct")
+        span_age.innerHTML="Please Select your age"
+    }
+
+    else{
+        country.classList.remove("error")
+        span_age.classList.add("correct")
+        span_age.classList.remove("uncorrect")
+        span_age.innerHTML=""
+        information.age = age.value
+    }
+
+        
+    console.log(information)
+
+})
+    </script>
+</body>
+</html>

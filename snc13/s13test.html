@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+            const stagiaire = {
+                code:1,
+                nom:"yourname",
+                prenom:"Yourfname",
+                ville:"CASABLANCA",
+                group:1,
+
+            }
+            stagiaire.nom = "nomtwo"
+            stagiaire.group = 106
+            console.log(stagiaire)
+            delete stagiaire.ville
+            // console.log(delete stagiaire.ville)
+
+            const stagiaires = new Array('no','nt','nf','nn','nnn','nn',"nyun","nn"); // for creating new array
+            // console.log(stagiaires.length);
+            // console.log(stagiaires);
+            // console.log(stagiaires[1]);
+            // console.log(stagiaires.indexOf('nn',4)); // return the index of the first nn after the index number 2
+            stagiaires.forEach(function (itmeValue,itemIndex){
+                console.log(itmeValue);
+            });
+            const cstg = stagiaires.map(function (itmeValue, itemIndex){
+                return itmeValue + "=>" + itemIndex;
+            })
+            console.log(cstg);
+
+            console.log("second part")
+
+            const module = ['PYTHON','HTML','PHP']
+            console.log(module)
+            // module.splice(1,1);  // supression ensembles des valeurs
+            // console.log(module)
+
+            // module.reverse();
+            // console.log(module)
+
+            let pyMD = module.find((item) => {  // callback function
+                return item === "PYTHON"
+            });
+            let filtertest = module.filter((item) => {  // more of a liste
+                return item === "PYTHON"
+            }) ;
+            let filterindex = module.findIndex((item) => {
+                return item === "PHP"
+            });
+            console.log(filterindex);
+
+
+
+        </script>
+    </body>
+</html>
