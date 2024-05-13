@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICE Prep</title>
+    <style>
+      .dv1 {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      label {
+        color: blue;
+        margin-right: 20px;
+      }
+
+      input {
+        width: 150px;
+      }
+
+      .dv2 {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      #engr {
+        margin-top: 30px;
+        color: white;
+        background-color: green;
+        border-color: green;
+      }
+      #check {
+        margin-top: 30px;
+        color: white;
+        background-color: dodgerblue;
+        border-color: dodgerblue;
+        
+      }
+
+      .error {
+        border-color: red !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dv1">
+      <form action="#">
+        <label for="cd">Code</label><br>
+        <input
+        type="text" name="cd" id="cd" placeholder="Entrer Votre code"class="code-input"
+        >
+        <br>
+        <label for="nm">Nom</label><br>
+        <input type="text" name="nm" id="nm" placeholder="Entrer votre nom">
+        <br>
+        <label for="pnm">Prenom</label><br>
+        <input type="text" name="pnm" id="pnm" placeholder="Entrer votre prenom">
+        <br>
+        <label for="grp">groupe</label><br>
+        <input type="text" name="grp" id="grp" placeholder="Entrer votre groupe">
+        <br>
+        <label for="nte">Note</label><br>
+        <input type="number" max="20" min="0" name="nte" id="nte" placeholder="Entrer votre note">
+        <br>
+      </form>
+      <table>
+        <tr>
+            <th></th>
+        </tr>
+      </table>
+    </div>
+    <div class="dv2">
+      <button id="engr" onclick="addToList()">ENREGISTRER</button>
+      <button id="check" onclick="check()">Vérifier</button>
+      <button id="tbl">Ajouter au Tableau </button>
+    </div>
+    <script src="exr1.js"></script>
+  </body>
+</html>

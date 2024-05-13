@@ -1,0 +1,31 @@
+{
+    "Lotus":[
+        {
+            "model":"evija",
+            "type":"Hyper-car",
+            "horsepower":2000
+        },
+        {
+            "model":"emeya",
+            "type":"GT",
+            "horsepower":905
+        },
+        {
+            "model":"eletre",
+            "type":"SUV",
+            "horsepower":905
+        },
+        {
+            "model":"emira 4c",
+            "type":"Sport-car",
+            "horsepower":360
+        },
+        {
+            "model":"emira v6",
+            "type":"Sport-car",
+            "horsepower":400
+        }
+    ]
+    
+}
+

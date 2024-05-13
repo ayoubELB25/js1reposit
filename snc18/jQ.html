@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> jQuery </title>
+        <script src="jquery-3.7.1.min.js"></script>
+        <style>
+            h1 , p  {
+                text-align: center;
+            } 
+            .buttons , #buttons-l {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items:  center;
+            }
+            button {
+                margin-left: 9px;
+            }
+            #colorbar {
+                margin: 0 auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            #colorbar p {
+                color: red;
+            }
+            .toRed {
+                color: red;
+                background-color: red;
+            
+            }
+            .toBlue {
+                color: blue;
+                background-color: blue;
+            
+            }
+            .toGreen {
+                color: green;
+                background-color: green;
+            
+            }   
+            .toYellow {
+                color: yellow;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            juery Course
+        </header>
+        <div id="container">
+            <h1 id="title-1">this is title 1</h1>
+            <p id="paragraph-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus ratione libero quasi, quisquam veritatis a in obcaecati harum sequi aspernatur distinctio
+            </p>
+            <h1 class="title-2"> this is title 2</h1>
+            <p class="paragraph-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque vero accusamus optio eos animi sapiente, facilis quidem odit atque consequatur iste voluptatibus nobis tempora nesciunt tempore modi quisquam, quibusdam aperiam?
+            </p>
+
+            <ul class="liste">
+                <li> Item 1 </li>
+                <li> Item 2 </li>
+                <li> Item 3 </li>
+                <li> Item 4 </li>
+            </ul>
+             <div class="buttons">
+                <button id="btn-hide">hide</button>
+                <button id="btn-show">show</button>
+             </div>
+            <br>  
+            <br>
+            <div id="buttons-l">
+                <button id="btn-hide-l">hide list</button>
+                <button id="btn-show-l">show list</button>
+            </div>
+            <br>
+            <br>
+            <div class="buttons">
+                <button  id="btn-ajouter">WELCOME</button>
+            </div>
+            <div id="colorbar">
+                <p>CHENGE THE COLOR</p>
+            </div>
+            <div class="buttons">
+                <button id="btn-clr">new color</button>
+                <button id="clr-rmv">remove the color</button>
+            </div>
+
+        </div>
+        <script src="jQ.js"></script>
+    </body>
+</html>
