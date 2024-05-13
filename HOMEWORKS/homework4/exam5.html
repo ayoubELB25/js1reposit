@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HOMEWORK 5</title>
+        <style>
+            fieldset {
+                height: 250px;
+            }
+            input {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #tbl-cont {
+                display: none;
+            }
+            .dl-btn{
+                background-color: red;
+                border:1px solid red;
+                color: white;
+            }
+            .mdf-btn{
+                background-color: orange;
+                border:1px solid orange;
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1> NOTES DE STAGIAIRES</h1>
+        <form action="#">
+            <fieldset>
+                <legend>Nouvelle ligne</legend>
+                <label for="fid" >ID :</label>
+                <input type="number" id="in-id">
+                <input type="button" name="in-btn" id="Lire" value="Lire">
+                <br>
+                <label for="lb-name" >Nom :</label>
+                <input type="text" name="lb-name" id="name" placeholder="Nom du stagiaires">
+                <br>
+                <label for="flr">Filiére :</label>
+                <label for="lTDI">TDI </label>
+                <input type="radio" name="ttt" id="tdi" value="TDI" >
+                <label for="lTDM">TDM </label>
+                <input type="radio" name="ttt" id="tdm" value="TDM">
+                <label for="lTRI">TRI </label>
+                <input type="radio" name="ttt" id="tri" value="TRI">
+                <label for=""></label>
+                <br>
+                <label for="lb-note">Note :</label>
+                <input type="text" name="lb-note" id="note">
+                <br>
+                <input type="button" name="afch-btn" id="afficher" value="afficher ">
+                <input type="button" name="tb-btn" id="ajouterTB" value="Ajouter ">
+                <br>
+                <input type="button" name="lr-btn" id="ajouter" value="list des stagiaires">
+
+            </fieldset>
+        </form>
+        <div id="tbl-cont">
+            <h1>liste des notes</h1>
+            <table border="1px solid" id="tbl">
+                <tr>
+                    <th>ID</th>
+                    <th>NOM</th>
+                    <th>NOTE</th>
+                    <th>FILIERE</th>
+                    <th colspan="2">GESTION</th>
+                </tr>
+            </table>
+        </div>
+        <script src="exam5.js"></script>
+    </body>
+</html>

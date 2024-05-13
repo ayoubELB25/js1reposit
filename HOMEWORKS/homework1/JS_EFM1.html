@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des produits</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    #productForm, #productTable {
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    form {
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+
+    form label, form input, form textarea , form select {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    form input, form textarea , form select{
+        width: 100%;
+        padding: 5px;
+    }
+
+    form button {
+        margin-top: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+    }
+    .buttons button {
+        width: 200px;
+        height: 50px;
+
+    }
+    #priceTOTALin {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        /* border: 1px solid black; */
+        height: 200px;
+        width: 74vw;
+        margin: 0 auto;
+    }
+    #calculateTotalBtn {
+        background-color: green;
+        height: 50px;
+        width: 250px;
+    }
+    #calculateTotalBtn:hover {
+        opacity: 0.9;
+    }
+    #priceTOTALin input {
+        width: 180px;
+        height: 30px;
+
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>Gestion des produits</h1>
+    <button id="addProductBtn">Ajouter un produit</button>
+
+    <div id="productForm" style="display: none;">
+        <h2>Ajouter un produit</h2>
+        <form id="addProductForm">
+            <label for="productCode">Code produit:</label>
+            <input type="number" id="productCode" required>
+            <br>
+            <label for="productTitle">Titre:</label>
+            <input type="text" id="productTitle" required>
+            <br>
+            <label for="productDescription">Description:</label>
+            <textarea id="productDescription" required></textarea>
+            <br>
+            <label for="productPrice">Prix:</label>
+            <input type="number" id="productPrice" required>
+            <br>
+            <label for="productCategory">Catégorie:</label>
+            <!-- <input type="text" id="productCategory" placeholder="Select Category" readonly>      -->
+            <select name="s-categ" id="productCategory" placeholder="Select Category">
+            </select>
+            <!-- <button id="showOptionsBtn">Show Options</button> -->
+            <br>
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+
+    <h2>Liste des produits</h2>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Code produit</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Catégorie</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="productList">
+        </tbody>
+    </table>
+    <div class="buttons">
+        <button type="button" id="saveProductBtn">Sauvegarder</button>
+        <button type="button" id="cancelProductBtn" style="display: none;">Annuler</button>
+        <button type="button" id="clearProductBtn">Vider</button>
+        <button id="deleteProductBtn" style="display: none;">Supprimer</button>
+        <button id="calculateTotalBtn">Calculate Total Price</button>
+        <!-- <button id="modifyProductBtn">Modifier</button>  -->
+        <button id="showCategoriesBtn" style="display: none;">Afficher la liste des catégori</button>
+        <ul id="categoriesList"></ul>
+
+    </div>
+    <div id="priceTOTALin">
+        <input type="text" id="totalPriceInput" readonly>
+    </div>
+     
+
+    <script src="sr.js">
+    </script>
+</body>
+</html>
